@@ -23,7 +23,7 @@ Github : https://github.com/rubenalkapov/TP_DWWM_Fevrier25_copiearendre_CLAUDON_
 Démonstration : url du déploiement
 
 ```
-Adresse email démo      : admin@garage-vparrot.com
+Adresse email démo      : admin@zoo-arcadia.com
 Mot de passe démo       : admin
 ```
 
@@ -54,8 +54,8 @@ L'application doit comporter à la fois une base de données relationnelle pour 
 2. **Backend** : PHP avec PDO pour la gestion des interactions avec la base de données relationnelle, garantissant la compatibilité et la sécurité. Slim PHP pourrait être utilisé pour construire une API légère et performante, servant de backbone à l'application.
 
 3. **Base de données** :
-    - **Relationnelle** : MySQL, MariaDB ou PostgreSQL pour stocker les informations structurées comme les détails des animaux, des habitats, et des utilisateurs.
-    - **NoSQL** : MongoDB pour gérer les statistiques de consultation des animaux.
+   - **Relationnelle** : MySQL, MariaDB ou PostgreSQL pour stocker les informations structurées comme les détails des animaux, des habitats, et des utilisateurs.
+   - **NoSQL** : MongoDB pour gérer les statistiques de consultation des animaux.
 
 4. **Déploiement** : Des plateformes comme Heroku, Fly.io, Azure ou Vercel sont recommandées pour un déploiement facile et évolutif de l'application.
 
@@ -63,4 +63,16 @@ L'application doit comporter à la fois une base de données relationnelle pour 
 
 En somme, le projet nécessitera une approche modulaire avec une API pour le backend et une interface interactive pour le frontend, offrant ainsi une base solide pour une future extension, telle qu'une application mobile ou un système d'affichage tactile.
 
+### Configuration de l'environement de travail
+Travaillant sur un système d'exploitation de type Windows, les informations ci-dessous y seront bien évidement destinées.
 
+Serveur:
+
+Apache
+PHP 8.3
+MySQL 8.0 / PDO
+Backend (API)
+
+HTML 5 (Tiwg)
+CSS 3
+Javascript

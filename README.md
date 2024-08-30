@@ -73,6 +73,33 @@ PHP 8.3
 MySQL 8.0 / PDO
 Backend (API)
 
-HTML 5 (Tiwg)
+HTML 5 (Twig)
 CSS 3
 Javascript
+
+## Utilisation
+
+### Installation de l'application en local
+
+* **Le petit éléphant bleu**
+  Laragon est un environnement de développement local moderne, entretenu et riche en fonctionnalités.
+
+Laragon améliore le développement web. Des développeurs du monde entier utilisent Laragon pour créer des applications rapidement et facilement. Il est utilisé par des milliers de développeurs avec amour.
+
+Pour installer **Laragon**, rien de bien compliqué
+Il vous suffit juste de cliquer sur ce lien **https://laragon.org/download/**, ce dernier vous redirige vers le site officiel de Laragon
+
+Une fois arrivé sur la page de téléchargements, il vous suffit de cliquer sur la version **Full**, cette dernière embarque la pile logicielles dont nous aurons besoin
+
+Une fois l'installation compléter, nous allons faire quelques vérifications techniques dans le Terminal de votre envireonnement Windows en écrivant simplement :
+
+```
+php -v
+mysql -v
+node -v
+npm -v
+```
+
+Super ! Maintenant nous allons nous rendre sur http://127.0.0.1/ pour vérifier que notre nouveau serveur web fonctionne à merveille
+
+Pour embéllir votre logiciel Laragon, il vous suffira d'aller jetez un coup d'oeil à la documentation officielle de Laragon en cliquant sur ce lien https://laragon.org/docs/ 

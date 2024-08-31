@@ -49,7 +49,7 @@ Les **utilisateurs** de l'application sont :
 L'application doit comporter à la fois une base de données relationnelle pour les données structurées et une base de données non relationnelle pour stocker les statistiques de consultation des animaux. La sécurité de l'accès aux différents rôles (administrateurs, vétérinaires, employés) est cruciale.
 
 #### Choix technologiques suggérés
-1. **Frontend** : HTML5, CSS3 (avec Bootstrap pour le style), et JavaScript pour créer une interface utilisateur fluide et responsive. ReactJS pourrait être un choix approprié pour une interface moderne et dynamique, facile à maintenir et à étendre.
+1. **Frontend** : HTML5, CSS3 (avec Tailwind pour le style), et JavaScript pour créer une interface utilisateur fluide et responsive. ReactJS pourrait être un choix approprié pour une interface moderne et dynamique, facile à maintenir et à étendre.
 
 2. **Backend** : PHP avec PDO pour la gestion des interactions avec la base de données relationnelle, garantissant la compatibilité et la sécurité. Slim PHP pourrait être utilisé pour construire une API légère et performante, servant de backbone à l'application.
 

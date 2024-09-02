@@ -82,7 +82,8 @@ Javascript
 ### Installation de l'application en local
 
 * **Le petit éléphant bleu**
-  Laragon est un environnement de développement local moderne, entretenu et riche en fonctionnalités.
+
+Laragon est un environnement de développement local moderne, entretenu et riche en fonctionnalités.
 
 Laragon améliore le développement web. Des développeurs du monde entier utilisent Laragon pour créer des applications rapidement et facilement. Il est utilisé par des milliers de développeurs avec amour.
 
@@ -90,6 +91,10 @@ Pour installer **Laragon**, rien de bien compliqué
 Il vous suffit juste de cliquer sur ce lien **https://laragon.org/download/**, ce dernier vous redirige vers le site officiel de Laragon
 
 Une fois arrivé sur la page de téléchargements, il vous suffit de cliquer sur la version **Full**, cette dernière embarque la pile logicielles dont nous aurons besoin
+
+Pour embéllir votre logiciel Laragon, il vous suffira d'aller jetez un coup d'oeil à la documentation officielle de Laragon en cliquant sur ce lien https://laragon.org/docs/
+
+Maintenant nous devons changer de version de PHP
 
 Une fois l'installation compléter, nous allons faire quelques vérifications techniques dans le Terminal de votre envireonnement Windows en écrivant simplement :
 
@@ -102,4 +107,8 @@ npm -v
 
 Super ! Maintenant nous allons nous rendre sur http://127.0.0.1/ pour vérifier que notre nouveau serveur web fonctionne à merveille
 
-Pour embéllir votre logiciel Laragon, il vous suffira d'aller jetez un coup d'oeil à la documentation officielle de Laragon en cliquant sur ce lien https://laragon.org/docs/ 
+Maintenant nous allons procéder à l'installation de composer (un gestionnaire de paquets) pour le bon déroulement de l'installation
+
+Pour ce faire il suffit de vous rendre sur ce site : https://getcomposer.org/download/ et de télécharger le setup en éxécutable
+
+Il ne vous reste plus qu'à suivre les instructions d'installation et tout devrait être ok !

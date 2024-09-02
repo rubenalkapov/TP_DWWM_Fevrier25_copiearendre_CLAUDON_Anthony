@@ -1,20 +1,60 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ asset('images/logo_arcadia.png') }}">
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+        {{ encore_entry_script_tags('navbar') }}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
+    {% endblock %}
+</head>
+<body>
+<nav class="bg-forest-green w-full fixed">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+            <div class="flex-shrink-0">
+                <img src="{{ asset('images/logo_arcadia.png') }}" alt="Logo Arcadia" draggable="false" class="w-20 lg:w-24 mt-16 ml-2 lg:ml-10">
+            </div>
+            <div class="hidden sm:block">
+                <div class="flex space-x-4 text-sand-text font-normal-font lg:ml-20">
+                    <a href="/" class="rounded-md px-3 py-2 hover:scale-110 transition-transform duration-75">Accueil</a>
+                    <a href="/services" class="rounded-md px-3 py-2 hover:scale-110 transition-transform duration-75">Services</a>
+                    <a href="/habitats" class="rounded-md px-3 py-2 hover:scale-110 transition-transform duration-75">Habitats</a>
+                    <a href="/avis" class="rounded-md px-3 py-2 hover:scale-110 transition-transform duration-75">Avis</a>
+                    <a href="/contact" class="rounded-md px-3 py-2 hover:scale-110 transition-transform duration-75">Nous contacter</a>
+                    <a href="/login" class="rounded-md px-3 py-2 hover:scale-110 transition-transform duration-75">Connexion</a>
+                </div>
+            </div>
+            <div class="sm:hidden flex items-center">
+                <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    <div class="hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2 text-sand-text font-normal-font mt-10">
+            <a href="/" class="block rounded-md px-3 py-2">Accueil</a>
+            <a href="/services" class="block rounded-md px-3 py-2">Services</a>
+            <a href="/habitats" class="block rounded-md px-3 py-2">Habitats</a>
+            <a href="/avis" class="block rounded-md px-3 py-2">Avis</a>
+            <a href="/contact" class="block rounded-md px-3 py-2">Nous contacter</a>
+            <a href="/login" class="block rounded-md px-3 py-2">Connexion</a>
+        </div>
+    </div>
+</nav>
+{% block body %}{% endblock %}
+</body>
 </html>

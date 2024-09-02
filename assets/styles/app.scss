@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --forest-green: #2E8B57;
+    --ocean-blue: #4682B4;
+    --sand-text: #F5F5DC;
+    --bubbles-font: "Rubik Bubbles";
+    --normal-font: "Rubik";
+}
+
+body {
+    background-color: var(--sand-text);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}

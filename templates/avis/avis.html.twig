@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Arcadia | Avis{% endblock %}
+
+{% block body %}
+    {% for avis in avis %}
+        {{ avis.pseudo }}
+        {{ avis.comments }}
+    {% endfor %}
+{% endblock %}

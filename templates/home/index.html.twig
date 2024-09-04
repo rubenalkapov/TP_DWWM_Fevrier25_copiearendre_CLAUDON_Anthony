@@ -3,5 +3,118 @@
 {% block title %}Arcadia | Accueil{% endblock %}
 
 {% block body %}
-    <h1>Hello world</h1>
+    <div class="flex flex-col justify-center items-center w-full m-auto">
+        <!-- Section Image principale avec texte -->
+        <div class="w-full">
+            <img src="{{ asset('images/bg.png') }}" alt="Zoo Arcadia" class="w-full h-auto" draggable="false">
+        </div>
+        <div class="flex flex-col items-start w-11/12">
+            <!-- Section description du zoo -->
+            <div class="w-full bg-sand-text">
+                <h2 class="text-4xl font-bubbles-font text-forest-green my-20">Le Zoo Arcadia</h2>
+                <p class="text-lg font-normal-font mb-16">
+                    Depuis sa fondation en 1960, notre zoo s'efforce de créer une véritable immersion dans la nature, en offrant une expérience authentique à travers une collection impressionnante d'animaux. Ceux-ci évoluent dans des habitats soigneusement reconstitués, tels que la vibrante savane africaine, la jungle dense et mystérieuse, ou encore les marais paisibles.
+                    Le bien-être de nos animaux est au cœur de nos préoccupations. Nos équipes d'experts veillent quotidiennement à leur santé, en effectuant des contrôles médicaux préventifs pour garantir des conditions de vie optimales. Grâce à une gestion financière rigoureuse, notre directeur visionnaire, José, a permis au zoo de se développer bien au-delà d'une simple attraction locale, transformant ainsi notre établissement en une véritable porte d'entrée vers le monde fascinant de la faune.
+                    Nous sommes impatients de vous accueillir au zoo Arcadia, où vous vivrez une aventure exceptionnelle, faite de rencontres mémorables et d'enseignements en écologie qui laisseront une empreinte durable. Venez découvrir dès aujourd'hui nos parcours animaliers et plongez dans un voyage inoubliable à travers le règne animal !
+                </p>
+            </div>
+
+            <div class="w-full">
+                <img src="{{ asset('images/giraffes.png') }}" alt="Zoo Arcadia" class="w-full h-auto" draggable="false">
+            </div>
+
+            <!-- Section Nos habitats -->
+            <div class="w-full flex flex-col justify-between bg-sand-text">
+                <h2 class="text-4xl font-bubbles-font text-forest-green my-10">Nos habitats</h2>
+                <p class="text-[24px] mb-28 font-normal-font">
+                    Explorez les habitats exceptionnels qui accueillent nos résidents remarquables.
+                    Entrez dans un univers captivant où chaque espace est méticuleusement conçu pour refléter l'habitat naturel de nos animaux. Parcourez des environnements variés, allant de la dense jungle tropicale aux vastes étendues des savanes africaines.
+                    Nos installations sont dédiées à offrir à chaque animal un espace sûr et confortable, leur permettant de s'épanouir pleinement et de vivre selon leur nature. Rejoignez-nous pour une immersion fascinante dans la vie de nos protégés, tout en contribuant à notre mission de bien-être animal et de préservation de la biodiversité.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-60">
+                    <div class="relative hover:scale-105 cursor-pointer transition-transform duration-150">
+                        <img src="{{ asset('images/jungle.png') }}" alt="Jungle" class="w-full h-auto">
+                        <div class="absolute inset-0 flex items-end justify-center text-white text-2xl font-bold mb-4 font-normal-font">Jungle</div>
+                    </div>
+                    <div class="relative hover:scale-105 cursor-pointer transition-transform duration-150">
+                        <img src="{{ asset('images/savane.png') }}" alt="Savane" class="w-full h-auto">
+                        <div class="absolute inset-0 flex items-end justify-center text-white text-2xl font-bold mb-4 font-normal-font">Savane</div>
+                    </div>
+                    <div class="relative hover:scale-105 cursor-pointer transition-transform duration-150">
+                        <img src="{{ asset('images/marais.png') }}" alt="Marais" class="w-full h-auto">
+                        <div class="absolute inset-0 flex items-end justify-center text-white text-2xl font-bold mb-4 font-normal-font">Marais</div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-4">
+                    <a href="#" class="bg-forest-green text-sand-text px-8 py-4 rounded-3xl font-normal-font text-xl">Voir tous nos habitats</a>
+                </div>
+            </div>
+
+            <!-- Section Services -->
+            <div class="w-full">
+                <div class="flex justify-center items-center">
+                    <img src="{{ asset('images/tigre.png') }}" alt="Tigre" draggable="false">
+                </div>
+                <div class="flex justify-center mt-4">
+                    <a href="#" class="bg-forest-green text-sand-text py-2 px-4 rounded">Découvrir nos services</a>
+                </div>
+            </div>
+
+            <!-- Section Les avis -->
+            <div class="w-full py-8 px-4 bg-sand-text">
+                <h2 class="text-4xl font-bubbles-font text-forest-green text-center mb-4">Les avis</h2>
+                <div class="flex justify-center items-center">
+                    <div class="bg-white rounded-lg shadow p-4 w-96">
+                        <p class="italic">"Une expérience magique au zoo Arcadia! Les habitats sont incroyablement réalistes, et les animaux semblent heureux et en pleine forme. À refaire!"</p>
+                        <p class="text-right font-bold mt-2">- Julien</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Horaires -->
+            <div class="w-full py-8 px-4">
+                <h2 class="text-4xl font-bubbles-font text-forest-green text-center mb-4">Nos horaires d'ouverture</h2>
+                <div class="flex justify-center">
+                    <table class="bg-white rounded-lg shadow-md">
+                        <thead class="bg-forest-green text-white">
+                        <tr>
+                            <th class="py-2 px-4">Jour</th>
+                            <th class="py-2 px-4">Heures</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="py-2 px-4">Lundi</td>
+                            <td class="py-2 px-4">08h - 18h</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4">Mardi</td>
+                            <td class="py-2 px-4">08h - 18h</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4">Mercredi</td>
+                            <td class="py-2 px-4">08h - 18h</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4">Jeudi</td>
+                            <td class="py-2 px-4">08h - 18h</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4">Vendredi</td>
+                            <td class="py-2 px-4">08h - 18h</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4">Samedi</td>
+                            <td class="py-2 px-4">08h - 18h</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4">Dimanche</td>
+                            <td class="py-2 px-4">08h - 18h</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

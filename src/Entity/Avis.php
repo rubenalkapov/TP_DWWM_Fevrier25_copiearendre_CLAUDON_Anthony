@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\AvisRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: AvisRepository::class)]
 class Avis
@@ -11,24 +12,19 @@ class Avis
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
-
-    #[ORM\Column]
     private ?int $avis_id = null;
 
     #[ORM\Column(length: 50)]
+    #[Assert\NotBlank]
     private ?string $pseudo = null;
 
     #[ORM\Column(length: 50)]
+    #[Assert\NotBlank]
     private ?string $comments = null;
 
     #[ORM\Column]
-    private ?bool $isVisible = null;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    // Définition de la valeur booléene en false car c'est aux emplyés d'approuver l'avis
+    private ?bool $isVisible = false;
 
     public function getAvisId(): ?int
     {

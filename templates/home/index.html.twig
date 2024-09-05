@@ -2,6 +2,17 @@
 
 {% block title %}Arcadia | Accueil{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('home') }}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+{% endblock%}
+
 {% block body %}
     <div class="flex flex-col justify-center items-center w-full m-auto">
         <!-- Section Image principale avec texte -->
@@ -61,13 +72,20 @@
             </div>
 
             <!-- Section Les avis -->
-            <div class="w-full py-8 px-4 bg-sand-text">
-                <h2 class="text-4xl font-bubbles-font text-forest-green text-center mb-4">Les avis</h2>
-                <div class="flex justify-center items-center">
-                    <div class="bg-white rounded-lg shadow p-4 w-96">
-                        <p class="italic">"Une expérience magique au zoo Arcadia! Les habitats sont incroyablement réalistes, et les animaux semblent heureux et en pleine forme. À refaire!"</p>
-                        <p class="text-right font-bold mt-2">- Julien</p>
+            <h2 class="text-4xl font-bubbles-font text-forest-green text-left mb-4">Les avis</h2>
+            <div class="w-10/12 mx-auto py-8 bg-sand-text">
+                <div class="swiper">
+                    <div class="swiper-wrapper w-10">
+                        {% for avi in avis %}
+                            <div class="swiper-slide w-10 bg-white py-20">
+                                <p class="italic">"{{ avi.comments }}"</p>
+                                <p class="text-right font-bold mt-2">- {{ avi.pseudo }}</p>
+                            </div>
+                        {% endfor %}
                     </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
 

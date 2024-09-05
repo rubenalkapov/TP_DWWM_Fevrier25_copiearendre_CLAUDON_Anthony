@@ -11,18 +11,10 @@ class Role
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
-
-    #[ORM\Column]
     private ?int $role_id = null;
 
     #[ORM\Column(length: 50)]
     private ?string $label = null;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
 
     public function getRoleId(): ?int
     {

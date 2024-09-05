@@ -22,7 +22,29 @@
         background-color: var(--sand-text);
         margin: 0;
         padding: 0;
-        //min-width: 100vw;
-        //min-height: 100vh;
+    }
+
+    .swiper-container {
+        position: relative;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        background-color: var(--ocean-blue);
+        border-radius: 16px;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .1s ease-in-out;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .swiper-button-prev::after, .swiper-button-next::after {
+        color: var(--sand-text);
+        font-size: 16px;
+    }
+
+    .swiper-button-prev:hover, .swiper-button-next:hover {
+        transform: scale(1.05);
     }
 }

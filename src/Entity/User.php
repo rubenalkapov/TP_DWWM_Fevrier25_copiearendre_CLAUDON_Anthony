@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -24,7 +23,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank]
-    #[Assert\Length(min: 6)]
+    #[Assert\Length(min: 5)]
     private ?string $password = null;
 
     #[ORM\Column(length: 50)]
@@ -35,7 +34,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Assert\NotBlank]
     private ?string $lastname = null;
 
-    // Getters and setters...
+    #[ORM\ManyToMany(targetEntity: Role::class, inversedBy: 'users')]
+    #[ORM\JoinTable(name: 'possede',
+        joinColumns: [new ORM\JoinColumn(name: "username", referencedColumnName: "username")],
+        inverseJoinColumns: [new ORM\JoinColumn(name: "role_id", referencedColumnName: "role_id")]
+    )]
+    private $roles;
+
+    public function __construct() {
+        $this->roles = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -90,9 +98,22 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getRoles(): array
-    {
-        return ['ROLE_USER'];
+    public function getRoles(): array {
+        return $this->roles->map(fn(Role $role) => $role->getLabel())->toArray();
+    }
+
+    public function addRole(Role $role): self {
+        if (!$this->roles->contains($role)) {
+            $this->roles[] = $role;
+        }
+
+        return $this;
+    }
+
+    public function removeRole(Role $role): self {
+        $this->roles->removeElement($role);
+
+        return $this;
     }
 
     public function getSalt(): ?string

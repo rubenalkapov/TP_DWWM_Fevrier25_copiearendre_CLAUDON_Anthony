@@ -12,7 +12,7 @@ use App\Form\AvisFormType;
 
 class AvisController extends AbstractController
 {
-    #[Route('/déposer-un-avis', name: 'app_create_avis')]
+    #[Route('/laisser-un-avis', name: 'app_create_avis')]
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
         $avis = new Avis();

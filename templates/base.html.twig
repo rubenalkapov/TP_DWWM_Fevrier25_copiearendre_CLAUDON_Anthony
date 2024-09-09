@@ -28,7 +28,11 @@
                     <a href="/habitats" class="rounded-md px-3 py-2 hover:scale-110 transition-transform duration-75">Habitats</a>
                     <a href="/avis" class="rounded-md px-3 py-2 hover:scale-110 transition-transform duration-75">Avis</a>
                     <a href="/contact" class="rounded-md px-3 py-2 hover:scale-110 transition-transform duration-75">Nous contacter</a>
-                    <a href="/login" class="rounded-md px-3 py-2 hover:scale-110 transition-transform duration-75">Connexion</a>
+                    {% if app.user %}
+                        <a href="/logout" class="rounded-md px-3 py-2 hover:scale-110 transition-transform duration-75">Déconnexion</a>
+                    {% else %}
+                        <a href="/login" class="rounded-md px-3 py-2 hover:scale-110 transition-transform duration-75">Connexion</a>
+                    {% endif %}
                 </div>
             </div>
             <div class="sm:hidden flex items-center">
@@ -51,7 +55,11 @@
             <a href="/habitats" class="block rounded-md px-3 py-2">Habitats</a>
             <a href="/avis" class="block rounded-md px-3 py-2">Avis</a>
             <a href="/contact" class="block rounded-md px-3 py-2">Nous contacter</a>
-            <a href="/login" class="block rounded-md px-3 py-2">Connexion</a>
+            {% if app.user %}
+                <a href="/logout" class="block rounded-md px-3 py-2">Déconnexion</a>
+            {% else %}
+                <a href="/login" class="block rounded-md px-3 py-2">Connexion</a>
+            {% endif %}
         </div>
     </div>
 </nav>

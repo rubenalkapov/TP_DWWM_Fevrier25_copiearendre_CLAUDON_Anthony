@@ -12,13 +12,12 @@
         </div>
     {% else %}
         <form method="post">
-            {% if error %}
-                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-            {% endif %}
-
             <div class="flex justify-center items-center w-full h-screen">
                 <div class="flex justify-center flex-col items-center w-full h-full">
                     <div class="flex justify-center flex-col items-center h-[479px] lg:w-[432px] s:w-[300px] bg-forest-green font-normal-font rounded-[10px] shadow-2xl">
+                        {% if error %}
+                            <div class="text-orange-500">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        {% endif %}
                         <img src="{{ asset('images/logo_arcadia.png') }}" alt="Logo Arcadia" draggable="false" class="w-32 top-0">
                         <h1 class="my-3 lg:text-4xl s:text-[24px] text-sand-text">Connexion</h1>
                         <label for="inputUsername" class="self-start ml-6 mb-1 font-normal-font text-sand-text">Nom d'utilisateur</label>

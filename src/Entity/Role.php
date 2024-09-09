@@ -16,6 +16,13 @@ class Role
     #[ORM\Column(length: 50)]
     private ?string $label = null;
 
+    #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'roles')]
+    private $users;
+
+    public function __construct() {
+        $this->users = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
     public function getRoleId(): ?int
     {
         return $this->role_id;
